@@ -10,8 +10,6 @@ class App extends Component {
     return (
       <div>
         <GetImageForm />
-        <GetImageButton />
-        <ImageDisplay />
       </div>
 
     )
