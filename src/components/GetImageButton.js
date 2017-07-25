@@ -4,7 +4,7 @@ export default class GetImageButton extends Component {
 
   render () {
     return (
-      <button>Get Images</button>
+      <button type="submit">Get Images</button>
     )
   }
 

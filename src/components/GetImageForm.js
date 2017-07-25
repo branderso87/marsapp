@@ -23,9 +23,7 @@ export default class GetImageForm extends Component {
     // setState is asynchronous
     this.setState(
       {
-      value: event.target.value
-      },
-      () => {
+      rover: event.target.value
       }
     )
   }
@@ -33,9 +31,7 @@ export default class GetImageForm extends Component {
   handleCamera (event) {
     this.setState(
       {
-      value: event.target.value
-      },
-      () => {
+      camera: event.target.value
       }
     )
   }
@@ -43,8 +39,6 @@ export default class GetImageForm extends Component {
     this.setState(
       {
         sol: event.target.value
-      },
-      () => {
       }
     )
   }
@@ -74,9 +68,6 @@ export default class GetImageForm extends Component {
   }
 
   render () {
-
-
-    console.log(this.state)
     return (
       <div>
         <form onSubmit={this.fetchRoverImage}>
@@ -94,9 +85,10 @@ export default class GetImageForm extends Component {
           </select>
           <label htmlFor="sol">Martian Sol: 1000-2000</label>
           <input type="number" onChange={this.handleSol} max="2000" min="1000" value={this.state.value}/>
+
           <GetImageButton />
         </form>
-        <h1>Oh HAI!</h1>
+
         <ImageDisplay photos={this.state.images}/>
       </div>
     )
